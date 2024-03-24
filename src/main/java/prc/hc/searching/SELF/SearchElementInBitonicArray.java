@@ -22,6 +22,7 @@ public class SearchElementInBitonicArray {
             arrayList.add(value);
         }
 
+
         return arrayList;
     }
 
