@@ -24,24 +24,18 @@ package prc.hc.sessiontests.thirdtest;
 public class AllAlphabets {
 
   public static boolean containsAllAlphabets(String str) {
-    // Create an array of size 26 to track encountered alphabets (frequency)
     int[] charCount = new int[26];
 
-    // Iterate through the string
     for (char ch : str.toCharArray()) {
-      // Check if lowercase alphabet (between 'a' and 'z')
       if (ch >= 'a' && ch <= 'z') {
-        // Get the index corresponding to the character (a-z maps to 0-25)
         int index = ch - 'a';
-        // Increment the count at that index
         charCount[index]++;
       }
     }
 
-    // Check if all characters have a count of at least 1
     for (int count : charCount) {
       if (count == 0) {
-        return false; // Missing alphabet found
+        return false;
       }
     }
 

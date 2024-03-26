@@ -59,7 +59,6 @@ public class LunchProblem {
         while (z) {
             unchangedCount++;
 
-            // Loop through students list
             int i =0;
                 while (i < mutableStudents.size() && mutableStudents.get(i).equals(mutableSandwhichces.get(i))) {
                     // Remove element at index i from both lists
@@ -72,7 +71,6 @@ public class LunchProblem {
                     return 0;
                 }
 
-            // Move student[i] to last if it doesn't match with sandwiches.get(i)
             int lastIndex = mutableStudents.size() - 1;
             while (unchangedCount < mutableStudents.size() && !mutableStudents.get(0).equals(mutableSandwhichces.get(0))) {
                 int temp = mutableStudents.get(0);
@@ -86,7 +84,6 @@ public class LunchProblem {
             }
         }
 
-        // This return statement is here to satisfy Java syntax, but it should never be reached
         return 0;
     }
 
